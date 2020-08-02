@@ -1,0 +1,13 @@
+.navbar {
+  display: none;
+}
+
+// mobile landscape
+@media (min-width: 640px) {
+  .navbar {
+    display: block;
+    &__items {
+      display: flex;
+    }
+  }
+}
