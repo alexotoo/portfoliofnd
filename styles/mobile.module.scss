@@ -22,12 +22,40 @@
 }
 .nav_mobi__page_close {
   position: relative;
-  border: 2px solid white;
-  color: white;
+  position: relative;
+  top: 0;
+  height: 3px;
+  width: 25px;
+  background-color: #0c1951;
+  cursor: pointer;
   z-index: 1;
   display: inline-block;
-  left: 85%;
-  top: 2rem;
+  left: 15%;
+  top: 1rem;
+  transform: rotate(45deg);
+}
+
+.nav_mobi__page_close::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 3px;
+  width: 25px;
+  background-color: #0c1951;
+  transform: rotate(85deg);
+  left: 0px;
+}
+.mobi_nav__cover {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+
+  left: 90%;
+  margin-top: 20px;
+}
+.mobi_nav__cover:hover {
+  cursor: pointer;
 }
 
 .nav_mobi__page_bg {
@@ -38,7 +66,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #69a1cf;
+  background: #00b4d8;
 }
 
 @keyframes bounce-in {

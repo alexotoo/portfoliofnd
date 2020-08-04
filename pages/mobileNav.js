@@ -6,9 +6,9 @@ export default function MobileNav() {
   const router = useRouter();
   return (
     <div className={styles.nav_mobi__page_bg}>
-      <a onClick={() => router.back()} className={styles.nav_mobi__page_close}>
-        CLOSE
-      </a>
+      <div onClick={() => router.back()} className={styles.mobi_nav__cover}>
+        <a className={styles.nav_mobi__page_close}></a>
+      </div>
 
       <li className={styles.nav_mobi__page}>
         <Link href="/">

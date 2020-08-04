@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@300&display=swap");
+
+// font-family: 'Lora', serif;
+// font-family: 'Montserrat', sans-serif;
+
 html {
   box-sizing: border-box;
 
@@ -11,8 +16,27 @@ html {
   box-sizing: inherit;
 }
 body {
-  background: url(../public/images/bg.jpg);
+  background-image: url(../public/images/bg.jpg);
+  background-size: cover;
+  font-family: "Lora", serif;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+p {
+  color: #2b2828;
+  font-size: 1.5rem;
+}
+
 body,
 h1,
 h2,
@@ -25,7 +49,6 @@ ol,
 ul {
   margin: 0;
   padding: 0;
-  font-weight: normal;
 }
 
 ol,
@@ -36,4 +59,7 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+}
+section {
+  padding: 2rem 3rem 0 3rem;
 }
