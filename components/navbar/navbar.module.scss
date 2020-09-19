@@ -1,11 +1,23 @@
+$colorWhite: #fdfdfd;
+$colorBasic: #0c1951;
+$colorBlue: #00b4d8;
+
 .navbar {
   display: none;
 }
-
+.logo {
+  cursor: pointer;
+}
 // mobile landscape
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .navbar {
     display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 13vh;
+    background-color: $colorWhite;
+    padding: 0 2rem 0 2rem;
     &__items {
       display: flex;
     }

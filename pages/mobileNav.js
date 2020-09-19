@@ -15,12 +15,8 @@ export default function MobileNav() {
           <a className={styles.nav_mobi__page_link}>Home</a>
         </Link>
 
-        <Link href="/about">
-          <a className={styles.nav_mobi__page_link}>About</a>
-        </Link>
-
-        <Link href="/portfolio">
-          <a className={styles.nav_mobi__page_link}>Portfolio</a>
+        <Link href="/projects">
+          <a className={styles.nav_mobi__page_link}>Projects</a>
         </Link>
 
         <Link href="/blog">

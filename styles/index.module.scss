@@ -1,3 +1,7 @@
+$colorWhite: #fdfdfd;
+$colorBasic: #0c1951;
+$colorBlue: #00b4d8;
+
 //===== utils ==== //
 .title {
   font-size: 3rem;
@@ -15,47 +19,51 @@
   background-color: #00b4d8;
   height: 5px;
   width: 80%;
+  margin: 3rem auto;
+}
+.content_text {
+  padding: 2rem 0 2rem 0;
+  font-size: 2rem;
+  text-align: justify;
+  font-weight: 100;
 }
 
 //===== home ==== //
+
+.profilepic {
+  animation: filtered 10s linear 5s infinite backwards;
+}
 .home {
-  position: relative;
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  height: 80vh;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.753),
-      rgba(0, 0, 0, 0.651)
-    ),
-    url(../public/images/homebg1.jpg);
-
-  background-position: center;
-
-  color: white;
+  min-height: 70vh;
+  background-color: $colorWhite;
+  padding-top: 5rem;
+  color: $colorBasic;
 }
+
 .heading {
-  margin-top: -10rem;
-  font-size: 3rem;
+  font-size: 5rem;
+  text-shadow: 2px 2px $colorBlue;
   font-weight: bolder;
   letter-spacing: 0.25rem;
-  padding: 1rem 0 2rem 0;
+  padding-bottom: 3rem;
 }
 .heading_text {
-  color: #00b4d8;
-  font-size: 2rem;
+  color: $colorBlue;
+  font-size: 3rem;
   text-transform: capitalize;
 }
 .heading_greet {
   position: relative;
-  color: white;
-  top: 5rem;
+  color: $colorBlue;
+  top: 20rem;
   opacity: 0;
-  animation: greet 1s ease-out 1.5s 1 forwards;
-  letter-spacing: 0.25rem;
+  animation: greet 1s ease-out 1s 1 forwards;
+  letter-spacing: 0.5rem;
+  font-size: 3rem;
 }
 
 @keyframes greet {
@@ -64,58 +72,152 @@
   }
   25% {
     opacity: 1;
-    transform: scaleX(0.95) scaleY(0.95);
-    color: #00b4d8;
+    transform: scaleX(1) scaleY(1);
+    color: $colorBasic;
   }
   50% {
     opacity: 1;
-    transform: scaleX(2) scaleY(2);
+    transform: scaleX(1) scaleY(0.8);
   }
 
   80% {
     opacity: 1;
-    transform: scaleX(1.5) scaleY(1.5);
-    color: #00b4d8;
+    transform: scaleX(1) scaleY(1.5);
+    color: $colorBasic;
   }
   100% {
     opacity: 1;
-    transform: scaleX(2) scaleY(2);
-    top: -10rem;
+    transform: scaleX(1) scaleY(1);
+    color: $colorBlue;
+    top: 0;
+  }
+}
+@keyframes filtered {
+  0% {
+    filter: none;
+  }
+
+  90% {
+    filter: grayscale(1);
+  }
+
+  100% {
+    filter: none;
   }
 }
 
-//===== about me / about ==== //
+//===== my Projects==== //
 
-.about {
+.projects {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   min-height: 70vh;
-}
-.about_content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  &_image {
-    height: 300px;
-    width: 300px;
+  margin-top: -30px;
+
+  &_skills {
+    background-color: #dfdfdf;
+    border-radius: 20px;
+    padding: 15px 15px 25px 15px;
+    box-shadow: 12px 16px 12px -9px rgba(0, 0, 0, 0.29);
   }
-  &_text {
-    padding: 2rem 0 2rem 0;
-    font-size: 1.5rem;
-    text-align: justify;
+  &_skills_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+    row-gap: 2rem;
+  }
+
+  &_skill_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &_skill_card_img {
+    width: 100%;
+    border-radius: 10px;
+    opacity: 1;
+    transition: ease 500ms;
+  }
+  &_skill_card_text {
+    color: $colorBasic;
+  }
+  &_skill_card_img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    opacity: 0.6;
+    box-shadow: 12px 16px 12px -9px rgba(0, 0, 0, 0.29);
+  }
+}
+.skill_title {
+  font-size: 3rem;
+  color: $colorBasic;
+  text-align: center;
+  text-shadow: $colorBlue 2px 2px;
+  letter-spacing: 2px;
+  padding-bottom: 2rem;
+}
+.skill_info {
+  text-align: center;
+  font-weight: 400;
+  padding: 0 0 2rem 0;
+  color: $colorBasic;
+}
+
+//===== my Project video ==== //
+
+.project {
+  &_outter_container {
+    margin-top: 4rem;
+    background-color: #dfdfdf;
+    border-radius: 20px;
+    padding: 15px 15px 25px 15px;
+    box-shadow: 12px 16px 12px -9px rgba(0, 0, 0, 0.29);
+  }
+  &_inner_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.25rem;
+    column-gap: 2rem;
+  }
+  &_video_card {
+    border-radius: 20px;
+    overflow: hidden;
+    opacity: 1;
+    transition: ease 300ms;
+    margin-bottom: 2rem;
+    border: 1px solid #bbbbbb;
+  }
+  &_video_card:hover {
+    opacity: 0.7;
+    transform: scale(1.02);
+    box-shadow: 12px 16px 12px -9px rgba(0, 0, 0, 0.29);
+  }
+  &_video {
+    width: 100%;
+  }
+  &_video:focus {
+    outline: none;
+    border: transparent;
+  }
+  &_btn {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+  }
+  &_btn1 {
+    padding: 0 0 10px 0;
+    display: flex;
+    text-decoration: none;
   }
 }
 
-//===== my portfolio / portfolio ==== //
-
-.portfolio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  min-height: 70vh;
+@media (min-width: 768px) {
+  .home_main {
+    display: flex;
+  }
+  .home1 {
+    width: 40%;
+    padding-top: 5rem;
+  }
 }
