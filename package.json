@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start"
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
-    "emailjs-com": "^2.6.3",
     "next": "9.4.4",
     "next-images": "^1.4.1",
     "next-videos": "^1.4.0",
