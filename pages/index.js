@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Link from "next/Link";
+
 import styles from "../styles/index.module.scss";
-import Button from "../components/button/Button";
+
+import { FaMobileAlt, FaEnvelope } from "react-icons/fa";
 
 import img1 from "../public/images/skill-reactjs.png";
 import img2 from "../public/images/skills-bootstrap5.png";
@@ -23,12 +25,14 @@ import imgprjt3 from "../public/images/project3.png";
 import imgprjt4 from "../public/images/project4.png";
 import imgprjt5 from "../public/images/project5.png";
 import imgprjt6 from "../public/images/project6.png";
+import imgprjt7 from "../public/images/project7.png";
+import EmailForm from "../components/email/EmailForm";
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>AlexooO portfolio</title>
       </Head>
       <main>
         <section className={styles.home_main}>
@@ -40,14 +44,14 @@ export default function Home() {
               Inspired to be the best, among the best and create the best web
               solutions. <br />
               <br /> I am a web developer currently focused on front-end
-              development living in Toronto. I am highly motivated by how I use
-              what I've learnt to bring web business solutions with a touch of
-              wow!.
+              development living in Toronto. I am highly motivated to use web
+              development skills I have to bring business solutions on the web
+              in an amazing way!.
               <br /> <br /> I am currently available for a suitable web
-              development position.
+              development position and ready to learn more.
             </p>
-            <Link href="/about">
-              <Button>Learn More</Button>
+            <Link href="/contact">
+              <a className={styles.button}>hire me</a>
             </Link>
           </div>
           <div className={styles.home1}>
@@ -56,6 +60,7 @@ export default function Home() {
         </section>
         <hr className={styles.divider} />
 
+        {/* project section  */}
         <section className={styles.projects}>
           <h1 className={styles.title}>
             My <span className={styles.title_blue}>Projects</span>
@@ -167,7 +172,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* prject section  */}
             <div className={styles.project_outter_container}>
               <p className={styles.skill_title}>Projects</p>
               <p className={styles.skill_info}>
@@ -184,8 +188,8 @@ export default function Home() {
                     />
                   </a>
                   <div className={styles.project_btn}>
-                    <a href="" className={styles.project_btn1}>
-                      <Button>Visit Code</Button>
+                    <a href="" className={styles.button}>
+                      Visit Code
                     </a>
                   </div>
                 </article>
@@ -198,8 +202,8 @@ export default function Home() {
                     />
                   </a>
                   <div className={styles.project_btn}>
-                    <a href="" className={styles.project_btn1}>
-                      <Button>Visit Code</Button>
+                    <a href="" className={styles.button}>
+                      Visit Code
                     </a>
                   </div>
                 </article>
@@ -212,8 +216,8 @@ export default function Home() {
                     />
                   </a>
                   <div className={styles.project_btn}>
-                    <a href="" className={styles.project_btn1}>
-                      <Button>Visit Code</Button>
+                    <a href="" className={styles.button}>
+                      Visit Code
                     </a>
                   </div>
                 </article>
@@ -226,8 +230,8 @@ export default function Home() {
                     />
                   </a>
                   <div className={styles.project_btn}>
-                    <a href="" className={styles.project_btn1}>
-                      <Button>Visit Code</Button>
+                    <a href="" className={styles.button}>
+                      Visit Code
                     </a>
                   </div>
                 </article>
@@ -240,12 +244,12 @@ export default function Home() {
                     />
                   </a>
                   <div className={styles.project_btn}>
-                    <a href="" className={styles.project_btn1}>
-                      <Button>Visit Code</Button>
+                    <a href="" className={styles.button}>
+                      Visit Code
                     </a>
                   </div>
                 </article>
-                <article className={styles.project_video_card}>
+                {/* <article className={styles.project_video_card}>
                   <a href="https://alexooo-cakes.netlify.app/" target="_blank">
                     <img
                       src={imgprjt6}
@@ -254,8 +258,25 @@ export default function Home() {
                     />
                   </a>
                   <div className={styles.project_btn}>
-                    <a href="" className={styles.project_btn1}>
-                      <Button>Visit Code</Button>
+                    <a href="" className={styles.button}>
+                      Visit Code
+                    </a>
+                  </div>
+                </article> */}
+                <article className={styles.project_video_card}>
+                  <a
+                    href="https://reactjs-budget-app.netlify.app/"
+                    target="_blank"
+                  >
+                    <img
+                      src={imgprjt7}
+                      alt=""
+                      className={styles.project_video}
+                    />
+                  </a>
+                  <div className={styles.project_btn}>
+                    <a href="" className={styles.button}>
+                      Visit Code
                     </a>
                   </div>
                 </article>
@@ -263,8 +284,21 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="blog"> this is blog</section>
-        <section className="contact"> this is contact</section>
+        <hr className={styles.divider} />
+
+        <section className={styles.contact}>
+          <EmailForm />
+          <div className={styles.contact_contacts}>
+            <div className={styles.contact_contacts_info}>
+              <FaMobileAlt className={styles.info_icon} />
+              <h1>+244 024 411 3073</h1>
+            </div>
+            <div className={styles.contact_contacts_info}>
+              <FaEnvelope className={styles.info_icon} />
+              <h1>alexotoous@gmail.com</h1>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );

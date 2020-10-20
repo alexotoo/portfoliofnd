@@ -1,0 +1,63 @@
+$colorBasic: #0c1951;
+$colorBlue: #00b4d8;
+$gray: #e6e6e6;
+.form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  align-items: center;
+}
+.form > input {
+  padding: 10px;
+  border-radius: 7px;
+  border-color: transparent;
+  margin-bottom: 1rem;
+  outline: none;
+  background-color: $gray;
+}
+.form > input:last-of-type {
+  margin-top: 1rem;
+}
+.form > * {
+  color: $colorBasic;
+  font-size: 1.5rem;
+  width: 95%;
+  transition: all ease-out 300ms;
+}
+.form > label {
+  margin-left: 3px;
+  padding-bottom: 3px;
+}
+.form textarea {
+  min-height: 10rem;
+  border-color: transparent;
+  border-radius: 7px;
+  outline: none;
+  background-color: $gray;
+}
+.form input[type="submit"] {
+  font-weight: bolder;
+  margin: 20px auto;
+  width: 100px;
+  background-color: $colorBlue;
+  border: $gray 1px solid;
+  cursor: pointer;
+}
+.form > *:focus {
+  width: 100%;
+  background-color: white;
+}
+.form input[type="submit"]:hover {
+  background-color: white;
+}
+.form input[type="submit"]:active {
+  transform: translateY(2px);
+}
+
+@media (min-width: 1024px) {
+  .form {
+    padding-right: 10rem;
+  }
+}

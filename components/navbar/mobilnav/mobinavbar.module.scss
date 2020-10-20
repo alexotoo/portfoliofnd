@@ -5,19 +5,20 @@ $colorBasic: #0c1951;
   display: inline-block;
 
   width: 30px;
-  height: 5vh;
-  // border: 2px solid green;
+  height: 22px;
+  //border: 2px solid green;
 
   margin: 30px 20px 20px 0;
+  transition: all ease 300ms;
 }
 .mobi_nav__cover:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 .mobi_nav__item {
   position: relative;
   top: 3px;
-
   height: 2px;
   width: 30px;
   background-color: $colorBasic;

@@ -19,13 +19,13 @@ export default function MobileNav() {
           <a className={styles.nav_mobi__page_link}>Projects</a>
         </Link>
 
-        <Link href="/blog">
-          <a className={styles.nav_mobi__page_link}>Blog</a>
-        </Link>
-
-        <Link href="/contact">
-          <a className={styles.nav_mobi__page_link}>Contact</a>
-        </Link>
+        <a
+          href="https://hashnode.com/@alexooO"
+          target="_blank"
+          className={styles.nav_mobi__page_link}
+        >
+          Blog
+        </a>
       </li>
     </div>
   );

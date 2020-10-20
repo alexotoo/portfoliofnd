@@ -7,7 +7,7 @@
   padding: 0;
   margin: 0;
   top: 0;
-  left: 0;
+  right: 0;
   opacity: 0;
   width: 20rem;
   height: 100%;
@@ -19,11 +19,16 @@
   margin: 2rem 0 2rem 0;
   text-decoration: none;
   color: #ffff;
+  transition: all ease 150ms;
 }
+.nav_mobi__page_link:hover {
+  transform: scale(1.1);
+  color: #00b4d8;
+}
+
 .nav_mobi__page_close {
   position: relative;
   position: relative;
-
   height: 2px;
   width: 30px;
   background-color: #0c1951;
@@ -49,11 +54,13 @@
   position: relative;
   display: inline-block;
   width: 35px;
-  height: 35px;
+  height: 25px;
   margin-left: -2%;
-  left: 93%;
+  left: 6%;
   margin-top: 35px;
-  // border: 2px solid green;
+  padding-top: 3px;
+  animation: nav-grow 700ms ease 100ms;
+  //border: 2px solid green;
 }
 .mobi_nav__cover:hover {
   cursor: pointer;
@@ -72,7 +79,7 @@
 
 @keyframes bounce-in {
   0% {
-    transform: translateX(-30rem);
+    transform: translateX(30rem);
   }
   70% {
     width: 23rem;
@@ -81,5 +88,16 @@
     background: #0c1951;
     opacity: 1;
     transform: translateX(1);
+  }
+}
+@keyframes nav-grow {
+  50% {
+    transform: scale(0.9);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }

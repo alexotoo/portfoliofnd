@@ -5,5 +5,9 @@
     text-transform: capitalize;
     font-size: 2rem;
     color: #0c1951;
+    transition: all ease-out 200ms;
+  }
+  &_link:hover {
+    color: #00b4d8;
   }
 }

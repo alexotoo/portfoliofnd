@@ -23,3 +23,17 @@ $colorBlue: #00b4d8;
     }
   }
 }
+.blog_link {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  color: #0c1951;
+  transition: ease-out 200ms;
+  margin-right: 2rem;
+
+  &:hover {
+    color: #00b4d8;
+  }
+}

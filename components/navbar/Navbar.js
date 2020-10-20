@@ -18,8 +18,15 @@ export default function Navbar() {
       <ul className={styles.navbar__items}>
         <Navlist>home</Navlist>
         <Navlist>projects</Navlist>
-        <Navlist>blog</Navlist>
-        <Navlist>contact</Navlist>
+        <li>
+          <a
+            className={styles.blog_link}
+            href="https://hashnode.com/@alexooO"
+            target="_blank"
+          >
+            Blog
+          </a>
+        </li>
       </ul>
     </nav>
   );
