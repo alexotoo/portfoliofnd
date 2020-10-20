@@ -41,10 +41,11 @@ export default function Home() {
             <h1 className={styles.heading}>I'm Alex Otoo</h1>
             <p className={styles.heading_text}>a web developer</p>
             <p className={styles.content_text}>
-              Inspired to be the best, among the best and create the best web
-              solutions. <br />
+              Inspired to be the best, among the best and build you the best
+              websites/web solutions.
+              <br />
               <br /> I am a web developer currently focused on front-end
-              development living in Toronto. I am highly motivated to use web
+              development based in Toronto. I am highly motivated to use web
               development skills I have to bring business solutions on the web
               in an amazing way!.
               <br /> <br /> I am currently available for a suitable web

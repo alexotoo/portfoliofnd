@@ -25,7 +25,15 @@ function EmailForm() {
   // }
 
   return (
-    <form className={styles.form}>
+    <form
+      className={styles.form}
+      action="/pages/submited"
+      name="contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" name="contact_number" />
       <label>Name</label>
       <input type="text" name="user_name" placeholder="your name" />
