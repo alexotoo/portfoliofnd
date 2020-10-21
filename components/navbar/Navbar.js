@@ -18,7 +18,7 @@ export default function Navbar() {
       <ul className={styles.navbar__items}>
         <Navlist>home</Navlist>
         <Navlist>projects</Navlist>
-        <li>
+        {/* <li>
           <a
             className={styles.blog_link}
             href="https://hashnode.com/@alexooO"
@@ -26,7 +26,7 @@ export default function Navbar() {
           >
             Blog
           </a>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
